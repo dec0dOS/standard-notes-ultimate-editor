@@ -40,6 +40,12 @@ body {
     }
 }
 
+.ProseMirror {
+    :nth-child(2) {
+        margin-top: 0px
+    }
+}
+
 .open-link-btn {
     color: inherit;
     text-decoration: inherit;
