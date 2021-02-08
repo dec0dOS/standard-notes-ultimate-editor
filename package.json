@@ -1,0 +1,51 @@
+{
+    "name": "sn-ultimate-editor",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "dependencies": {
+        "@standardnotes/component-relay": "^2.0.3",
+        "lodash": "^4.17.20",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-scripts": "4.0.2",
+        "rich-markdown-editor": "^11.2.0-0",
+        "sn-components-api": "^1.2.8",
+        "sn-stylekit": "^2.1.1",
+        "style-loader": "^2.0.0",
+        "styled-components": "^5.2.1"
+    },
+    "devDependencies": {
+        "sass": "^1.32.6",
+        "sass-loader": "^11.0.0",
+        "source-map-explorer": "^2.5.2"
+    },
+    "browserslist": {
+        "production": [
+            "last 2 versions",
+            "last 1 year",
+            "not dead",
+            "not IE 11",
+            "not op_mini all",
+            "last 3 Android version",
+            "last 3 iOS version",
+            "last 3 Electron version",
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "sn": {
+        "main": "build/index.html"
+    }
+}

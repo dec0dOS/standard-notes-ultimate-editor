@@ -1,0 +1,8 @@
+{
+    "identifier": "dev.dec0dOS.ultimate_editor_local_test",
+    "name": "Ultimate Editor local test",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "0.1",
+    "url": "http://localhost:3000"
+}
