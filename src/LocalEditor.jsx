@@ -6,7 +6,7 @@ import BridgeManager from "./lib/BridgeManager";
 import theme from './lib/theme';
 // import youtube_embed from './embeds/YouTube';
 
-import { linkify, openLinkDesktop, openLinkMobile, platform } from './lib/utils';
+import { linkify, openLinkDesktop, openLinkMobile, resizeFile, platform } from './lib/utils';
 
 
 export default class LocalEditor extends React.Component {
@@ -70,6 +70,9 @@ export default class LocalEditor extends React.Component {
                     onChange={this.onChange.bind(this)}
                     theme={theme}
                     className="editor"
+                    uploadImage={async file => {
+                        return await resizeFile(file);
+                    }}
                     onClickLink={(href, event) => {
                         // mobile RMe popup
                         if (!(platform == "Desktop" || platform == "Browser")) {

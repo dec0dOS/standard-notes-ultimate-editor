@@ -1,4 +1,5 @@
 import Alert from './Alert'
+import Resizer from 'react-image-file-resizer';
 
 function linkify(inputText) {
     // URLs starting with http://, https://
@@ -79,4 +80,13 @@ function openLinkMobile(url) {
     alert.present()
 }
 
-export { linkify, openLinkDesktop, openLinkMobile, platform }
+const resizeFile = (file) => new Promise(resolve => {
+    Resizer.imageFileResizer(file, 500, 500, 'JPEG', 10, 0,
+        uri => {
+            resolve(uri);
+        },
+        'base64'
+    );
+});
+
+export { linkify, openLinkDesktop, openLinkMobile, resizeFile, platform }
