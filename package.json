@@ -1,62 +1,62 @@
 {
-    "name": "sn-ultimate-editor",
-    "version": "2.1.2",
-    "homepage": "./",
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "lint": "standard 'src/**/*.js' 'src/**/*.jsx' --fix",
-        "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "dependencies": {
-        "@standardnotes/component-relay": "^2.0.3",
-        "lodash": "^4.17.20",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "react-image-file-resizer": "^0.4.0",
-        "react-scripts": "4.0.2",
-        "rich-markdown-editor": "^11.2.0-0",
-        "sn-components-api": "^1.2.8",
-        "sn-stylekit": "^2.1.1",
-        "style-loader": "^2.0.0",
-        "styled-components": "^5.2.1"
-    },
-    "devDependencies": {
-        "@babel/eslint-parser": "^7.12.13",
-        "@babel/plugin-proposal-class-properties": "^7.12.13",
-        "@babel/preset-react": "^7.12.13",
-        "sass": "^1.32.6",
-        "sass-loader": "^11.0.0",
-        "source-map-explorer": "^2.5.2",
-        "standard": "^16.0.3"
-    },
-    "browserslist": {
-        "production": [
-            "last 2 versions",
-            "last 1 year",
-            "not dead",
-            "not IE 11",
-            "not op_mini all",
-            "last 3 Android version",
-            "last 3 iOS version",
-            "last 3 Electron version",
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "standard": {
-        "parser": "@babel/eslint-parser"
-    },
-    "sn": {
-        "main": "build/index.html"
-    }
+  "name": "sn-ultimate-editor",
+  "version": "2.1.2",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "standard 'src/**/*.js' 'src/**/*.jsx' --fix",
+    "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "dependencies": {
+    "@standardnotes/component-relay": "^2.0.3",
+    "lodash": "^4.17.20",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-image-file-resizer": "^0.4.0",
+    "react-scripts": "4.0.2",
+    "rich-markdown-editor": "^11.2.0-0",
+    "sn-components-api": "^1.2.8",
+    "sn-stylekit": "^2.1.1",
+    "style-loader": "^2.0.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "sass": "^1.32.6",
+    "sass-loader": "^11.0.0",
+    "source-map-explorer": "^2.5.2",
+    "standard": "^16.0.3"
+  },
+  "browserslist": {
+    "production": [
+      "last 2 versions",
+      "last 1 year",
+      "not dead",
+      "not IE 11",
+      "not op_mini all",
+      "last 3 Android version",
+      "last 3 iOS version",
+      "last 3 Electron version",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "standard": {
+    "parser": "@babel/eslint-parser"
+  },
+  "sn": {
+    "main": "build/index.html"
+  }
 }
