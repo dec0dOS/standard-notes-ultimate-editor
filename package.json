@@ -5,6 +5,7 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
+        "lint": "standard 'src/**/*.js' 'src/**/*.jsx' --fix",
         "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'"
     },
     "eslintConfig": {
@@ -24,9 +25,11 @@
         "styled-components": "^5.2.1"
     },
     "devDependencies": {
+        "@babel/eslint-parser": "^7.12.13",
         "sass": "^1.32.6",
         "sass-loader": "^11.0.0",
-        "source-map-explorer": "^2.5.2"
+        "source-map-explorer": "^2.5.2",
+        "standard": "^16.0.3"
     },
     "browserslist": {
         "production": [
@@ -47,6 +50,9 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "standard": {
+        "parser": "babel-eslint"
     },
     "sn": {
         "main": "build/index.html"
