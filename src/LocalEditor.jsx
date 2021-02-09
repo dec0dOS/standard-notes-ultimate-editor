@@ -21,7 +21,7 @@ export default class LocalEditor extends React.Component {
             const refresh = !this.state.note
                 || (this.state.note && this.state.note.uuid !== note.uuid);
             this.setState({
-                note: BridgeManager.get().getNote(),
+                note: note,
             });
             if (refresh) {
                 if (note.isMetadataUpdate) { return; }
