@@ -24,8 +24,6 @@ export default class LocalEditor extends React.Component {
                 note: note,
             });
             if (refresh) {
-                if (note.isMetadataUpdate) { return; }
-
                 this.updateMarkdown();
             }
         });
@@ -33,24 +31,24 @@ export default class LocalEditor extends React.Component {
 
     updateMarkdown() {
         let markdown = this.state.note.content.text
-        // onload replace links
+        // onload replace links and fix newlines
         markdown = linkify(markdown)
-        //     .replace(/(\n{2})(\n+)/g, (m, p, q) => p + q.replace(/(\n)/g, '\\$1'));
-        // if (markdown === "") {
-        //     markdown = "\n";
-        // }
+            .replace(/(\n{2})(\n+)/g, (m, p, q) => p + q.replace(/(\n)/g, '\\$1'));
+        if (markdown === "") {
+            markdown = "\n";
+        }
 
         this.setState({ markdown });
     }
 
     onChange = debounce((value) => {
-        const text = value();
         if (this.state.note) {
+            const text = value();
             let note = this.state.note;
             note.content.text = text;
             this.setState({ note: note });
+            BridgeManager.get().save();
         }
-        BridgeManager.get().save();
     })
 
     getNoteContents() {
