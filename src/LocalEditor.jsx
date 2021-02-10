@@ -50,13 +50,6 @@ export default class LocalEditor extends React.Component {
       }
     })
 
-    getNoteContents () {
-      if (this.state.note) {
-        return this.state.note.content.text
-      }
-      return ''
-    }
-
     render () {
       return (
         <div>
