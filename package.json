@@ -20,7 +20,7 @@
     "react-scripts": "4.0.2",
     "rich-markdown-editor": "^11.3.0-0",
     "sn-components-api": "^1.2.8",
-    "sn-stylekit": "^2.1.1",
+    "sn-stylekit": "^2.2.0",
     "style-loader": "^2.0.0",
     "styled-components": "^5.2.1"
   },
@@ -28,8 +28,8 @@
     "@babel/eslint-parser": "^7.12.13",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
-    "sass": "^1.32.6",
-    "sass-loader": "^11.0.0",
+    "sass": "^1.32.7",
+    "sass-loader": "^11.0.1",
     "source-map-explorer": "^2.5.2",
     "standard": "^16.0.3"
   },

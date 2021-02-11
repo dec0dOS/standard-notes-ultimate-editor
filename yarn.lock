@@ -10081,7 +10081,7 @@ sass-loader@^10.0.5:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass-loader@^11.0.0:
+sass-loader@^11.0.1:
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-11.0.1.tgz#8672f896593466573b904f47693e0695368e38c9"
   integrity sha512-Vp1LcP4slTsTNLEiDkTcm8zGN/XYYrZz2BZybQbliWA8eXveqA/AxsEjllQTpJbg2MzCsx/qNO48sHdZtOaxTw==
@@ -10089,7 +10089,7 @@ sass-loader@^11.0.0:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
-sass@^1.32.6:
+sass@^1.32.7:
   version "1.32.7"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.32.7.tgz#632a9df2b85dc4b346977fcaf2d5e6f2b7039fd8"
   integrity sha512-C8Z4bjqGWnsYa11o8hpKAuoyFdRhrSHcYjCr+XAWVPSIQqC8mp2f5Dx4em0dKYehPzg5XSekmCjqJnEZbIls9A==
@@ -10393,7 +10393,7 @@ sn-components-api@^1.2.8:
   resolved "https://registry.yarnpkg.com/sn-components-api/-/sn-components-api-1.2.8.tgz#5fbba6652c08d5b3e92502d782453c1520165721"
   integrity sha512-epBFsQIKLK78SnJ6e5JNjYbdOAYbKzRyydjpAqji0WdX3S/tOD5Z3UVdLVyi4orKaM4322dk6nRJiTHMI1VyIw==
 
-sn-stylekit@^2.1.1:
+sn-stylekit@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/sn-stylekit/-/sn-stylekit-2.2.0.tgz#0c143cb25addf4a1edf02d41ea1d6821017f8652"
   integrity sha512-xUx+EujROZBaoMrvM0y7CjHPD6WJfwu1tY3oeFG/sV3M9YvCcGkX76Jz9iPt0daeYM4h0oAWphniH7pLi3aFwA==
