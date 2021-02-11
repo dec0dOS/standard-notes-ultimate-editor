@@ -6,6 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "standard 'src/**/*.js' 'src/**/*.jsx' --fix",
+    "upgradeDeps": "npx npm-check-updates --upgrade && yarn install",
     "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
@@ -16,7 +17,7 @@
     "lodash": "^4.17.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-image-file-resizer": "^0.4.0",
+    "react-image-file-resizer": "^0.4.1",
     "react-scripts": "4.0.2",
     "rich-markdown-editor": "^11.3.0-0",
     "sn-components-api": "^1.2.8",
