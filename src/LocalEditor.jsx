@@ -41,11 +41,13 @@ export default function LocalEditor (props) {
   }
 
   const onChange = debounce((value) => {
-    const text = value()
-    const note = gNote
-    note.content.text = text
-    setGNote(note)
-    BridgeManager.get().save()
+    if (gNote) {
+      const text = value()
+      const note = gNote
+      note.content.text = text
+      setGNote(note)
+      BridgeManager.get().save()
+    }
   })
 
   return (
