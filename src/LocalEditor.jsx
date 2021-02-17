@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import useStateRef from 'react-usestateref'
+
 import RichMarkdownEditor from 'rich-markdown-editor'
 import { debounce } from 'lodash'
 
@@ -8,90 +10,82 @@ import theme from './lib/theme'
 
 import { linkify, openLinkDesktop, openLinkMobile, resizeFile, platform } from './lib/utils'
 
-export default class LocalEditor extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {}
-  }
+export default function LocalEditor (props) {
+  const [gNote, setGNote, gNoteRef] = useStateRef(null)
+  const [gMarkdown, setGMarkdown] = useState('')
 
-  componentDidMount () {
+  useEffect(() => {
     BridgeManager.get().addUpdateObserver(() => {
       const note = BridgeManager.get().getNote()
-      const refresh = !this.state.note ||
-                (this.state.note && this.state.note.uuid !== note.uuid)
-      this.setState({
-        note: note
-      })
+      const refresh = !gNoteRef.current || (gNoteRef.current && gNoteRef.current.uuid !== note.uuid)
+      setGNote(note)
       if (refresh) {
-        this.updateMarkdown()
+        updateMarkdown(note)
       }
     })
-  }
+  }, [])
 
-  updateMarkdown () {
-    let markdown = this.state.note.content.text
-    // onload replace links and fix newlines
-    markdown = linkify(markdown)
-      .replace(/(\n{2})(\n+)/g, (m, p, q) => p + q.replace(/(\n)/g, '\\$1'))
-    if (markdown === '') {
-      markdown = '\n'
-    }
-
-    this.setState({ markdown })
-  }
-
-    onChange = debounce((value) => {
-      if (this.state.note) {
-        const text = value()
-        const note = this.state.note
-        note.content.text = text
-        this.setState({ note: note })
-        BridgeManager.get().save()
+  const updateMarkdown = (note) => {
+    if (note) {
+      let markdown = note.content.text
+      // onload replace links and fix ghost bug
+      markdown = linkify(markdown)
+      if (markdown === '') {
+        markdown = '\n'
       }
-    })
 
-    render () {
-      return (
-        <div>
-          <RichMarkdownEditor
-            value={this.state.markdown}
-            placeholder=''
-            autoFocus
-            onChange={this.onChange.bind(this)}
-            theme={theme}
-            className='editor'
-            uploadImage={async file => {
-              return await resizeFile(file)
-            }}
-            onClickLink={(href, event) => {
-              // mobile RMe popup
-              if (!(platform === 'Desktop' || platform === 'Browser')) {
-                event.preventDefault()
-                openLinkMobile(href)
-              } else {
-                // desktop CTRL/CMD+click
-                if (event.ctrlKey || event.metaKey) {
-                  openLinkDesktop(href)
-                } else {
-                  // desktop RMe popup
-                  if (event._reactName === 'onClick') {
-                    openLinkDesktop(href)
-                  }
-                }
-              }
-            }}
-            onHoverLink={event => {
-              // mobile click on link
-              if (!(platform === 'Desktop' || platform === 'Browser')) {
-                event.preventDefault()
-                openLinkMobile(event.target.href)
-              }
-            }}
-            embeds={[
-              // youtube_embed,
-            ]}
-          />
-        </div>
-      )
+      setGMarkdown(markdown)
+    } else {
+      setGMarkdown('')
     }
+  }
+
+  const onChange = debounce((value) => {
+    const text = value()
+    const note = gNote
+    note.content.text = text
+    setGNote(note)
+    BridgeManager.get().save()
+  })
+
+  return (
+    <RichMarkdownEditor
+      value={gMarkdown}
+      placeholder=''
+      autoFocus
+      onChange={onChange}
+      theme={theme}
+      className='editor'
+      uploadImage={async file => {
+        return await resizeFile(file)
+      }}
+      onClickLink={(href, event) => {
+      // mobile RMe popup
+        if (!(platform === 'Desktop' || platform === 'Browser')) {
+          event.preventDefault()
+          openLinkMobile(href)
+        } else {
+        // desktop CTRL/CMD+click
+          if (event.ctrlKey || event.metaKey) {
+            openLinkDesktop(href)
+          } else {
+          // desktop RMe popup
+            if (event._reactName === 'onClick') {
+              openLinkDesktop(href)
+            }
+          }
+        }
+      }}
+      onHoverLink={event => {
+      // mobile click on link
+        if (!(platform === 'Desktop' || platform === 'Browser')) {
+          event.preventDefault()
+          openLinkMobile(event.target.href)
+        }
+      }}
+      embeds={[
+      // youtube_embed,
+      ]}
+    />
+  )
 }

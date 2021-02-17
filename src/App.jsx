@@ -6,7 +6,7 @@ import LocalEditor from './LocalEditor'
 function App () {
   return (
     <div className='App'>
-      <LocalEditor />
+      {LocalEditor()}
     </div>
   )
 }
