@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import useStateRef from 'react-usestateref'
 
 import RichMarkdownEditor from 'rich-markdown-editor'
@@ -23,7 +23,7 @@ export default function LocalEditor (props) {
         updateMarkdown(note)
       }
     })
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const updateMarkdown = (note) => {
     if (note) {
