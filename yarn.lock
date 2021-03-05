@@ -64,14 +64,14 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/eslint-parser@^7.13.4":
-  version "7.13.4"
-  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.13.4.tgz#dd9df3c70f44d2fb5a6519e8e10ca06c67dca43a"
-  integrity sha512-WfFEd89SzqmtYox8crTLJuEXyJolZY6Uu6iJpJmw4aMu50zHbYnxzxwuVkCt2cWygw+gLkUPTtAuox7eSnrL8g==
+"@babel/eslint-parser@^7.13.8":
+  version "7.13.8"
+  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.13.8.tgz#6f2bde6b0690fcc0598b4869fc7c8e8b55b17687"
+  integrity sha512-XewKkiyukrGzMeqToXJQk6hjg2veI9SNQElGzAoAjKxYCLbgcVX4KA2WhoyqMon9N4RMdCZhNTJNOBcp9spsiw==
   dependencies:
     eslint-scope "5.1.0"
     eslint-visitor-keys "^1.3.0"
-    semver "7.0.0"
+    semver "^6.3.0"
 
 "@babel/generator@^7.12.1", "@babel/generator@^7.12.13":
   version "7.12.15"
@@ -8057,10 +8057,10 @@ os-browserify@^0.3.0:
   resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
   integrity sha1-hUNzx/XCMVkU/Jv8a9gjj92h7Cc=
 
-outline-icons@^1.25.0:
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/outline-icons/-/outline-icons-1.25.0.tgz#9bf0efc0ffe9b70cf26bbfd8ca7873d9158daa5c"
-  integrity sha512-VlIBz8nK6X4bAD43B1ChLq1h86IsZ5iQ9agjz6dPLodCKAmlEnCZSex4rwjXSfnydxVOL+2Kw3/2sOR0OeMH9w==
+outline-icons@^1.25.1-1:
+  version "1.25.1-1"
+  resolved "https://registry.yarnpkg.com/outline-icons/-/outline-icons-1.25.1-1.tgz#1d17b478283181fd360f43498421a8b63f3fd9e0"
+  integrity sha512-rnTl/v2nMabiyCmsL9WmVz2PoZXNEO135MULXUTVtTmWo6KGWsl4B9ug8dxw4MR08fIiJt5niwQsE2EDlH6n6A==
 
 p-each-series@^2.1.0:
   version "2.2.0"
@@ -9999,15 +9999,15 @@ rgba-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/rgba-regex/-/rgba-regex-1.0.0.tgz#43374e2e2ca0968b0ef1523460b7d730ff22eeb3"
   integrity sha1-QzdOLiyglosO8VI0YLfXMP8i7rM=
 
-rich-markdown-editor@^11.3.2:
-  version "11.3.2"
-  resolved "https://registry.yarnpkg.com/rich-markdown-editor/-/rich-markdown-editor-11.3.2.tgz#a371d6c26c400c85e6ec17ecdd7aeb8f5cfdeb8a"
-  integrity sha512-drStmbQKSLqISeBlyD+vOiqmG4YZU6dbyrupeVbCqUF1OouLhj6qNrtK21mu7x595i0d44Dpzh3OxoEU68xpUw==
+rich-markdown-editor@^11.4.0:
+  version "11.4.0-0"
+  resolved "https://registry.yarnpkg.com/rich-markdown-editor/-/rich-markdown-editor-11.4.0-0.tgz#b39232350a56e46efa3bfb28b4f84b620c590b85"
+  integrity sha512-GMuGSt6ATPQ52GFLrJTe2BYEfF5DBJvlvsCuy/U0PLvP+mVu3AmPu9UD/nBQeCfrRne1gnrDwPz1NbvZfOHM3Q==
   dependencies:
     copy-to-clipboard "^3.0.8"
     lodash "^4.17.11"
     markdown-it-container "^3.0.0"
-    outline-icons "^1.25.0"
+    outline-icons "^1.25.1-1"
     prosemirror-commands "^1.1.6"
     prosemirror-dropcursor "^1.3.3"
     prosemirror-gapcursor "^1.1.5"

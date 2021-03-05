@@ -20,14 +20,14 @@
     "react-image-file-resizer": "^0.4.2",
     "react-scripts": "4.0.3",
     "react-usestateref": "^1.0.4",
-    "rich-markdown-editor": "^11.3.2",
+    "rich-markdown-editor": "^11.4.0-0",
     "sn-components-api": "^1.2.8",
     "sn-stylekit": "^2.2.0",
     "style-loader": "^2.0.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.4",
+    "@babel/eslint-parser": "^7.13.8",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/preset-react": "^7.12.13",
     "sass": "^1.32.8",
