@@ -14,6 +14,8 @@ export default function LocalEditor (props) {
   const [gNote, setGNote, gNoteRef] = useStateRef(null)
   const [gMarkdown, setGMarkdown] = useState('')
 
+  const [editor, setEditor] = useState(null)
+
   useEffect(() => {
     BridgeManager.get().addUpdateObserver(() => {
       const note = BridgeManager.get().getNote()
@@ -53,6 +55,7 @@ export default function LocalEditor (props) {
   return (
     <RichMarkdownEditor
       value={gMarkdown}
+      ref={setEditor}
       placeholder=''
       autoFocus
       onChange={onChange}
@@ -62,16 +65,16 @@ export default function LocalEditor (props) {
         return await resizeFile(file)
       }}
       onClickLink={(href, event) => {
-      // mobile RMe popup
+        // mobile RMe popup
         if (!(platform === 'Desktop' || platform === 'Browser')) {
           event.preventDefault()
           openLinkMobile(href)
         } else {
-        // desktop CTRL/CMD+click
+          // desktop CTRL/CMD+click
           if (event.ctrlKey || event.metaKey) {
             openLinkDesktop(href)
           } else {
-          // desktop RMe popup
+            // desktop RMe popup
             if (event._reactName === 'onClick') {
               openLinkDesktop(href)
             }
@@ -79,11 +82,14 @@ export default function LocalEditor (props) {
         }
       }}
       onHoverLink={event => {
-      // mobile click on link
+        // mobile click on link
         if (!(platform === 'Desktop' || platform === 'Browser')) {
           event.preventDefault()
           openLinkMobile(event.target.href)
         }
+      }}
+      handleDOMEvents={{
+        paste: () => updateMarkdown()
       }}
       embeds={[
       // youtube_embed,
