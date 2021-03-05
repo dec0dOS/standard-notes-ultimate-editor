@@ -5,9 +5,8 @@
   "scripts": {
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
-    "lint": "standard 'src/**/*.js' 'src/**/*.jsx' --fix",
-    "upgradeDeps": "npx npm-check-updates --upgrade && yarn install",
-    "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'"
+    "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'",
+    "upgradeDeps": "npx npm-check-updates --upgrade && yarn install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,8 +31,7 @@
     "@babel/preset-react": "^7.12.13",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
-    "source-map-explorer": "^2.5.2",
-    "standard": "^16.0.3"
+    "source-map-explorer": "^2.5.2"
   },
   "browserslist": {
     "production": [
@@ -54,9 +52,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "standard": {
-    "parser": "@babel/eslint-parser"
   },
   "sn": {
     "main": "build/index.html"
