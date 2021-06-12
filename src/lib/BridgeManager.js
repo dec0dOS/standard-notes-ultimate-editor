@@ -54,9 +54,9 @@ export default class BridgeManager {
     if (this.note) {
       const note = this.note;
 
-      // if (note.content && note.content.text) {
-      //     note.content.text = note.content.text.replace(/\n\\/g, '\n');
-      // }
+      if (note.content && note.content.text) {
+        note.content.text = note.content.text.replace(/\n\\/g, "\n");
+      }
 
       this.componentRelay.saveItemWithPresave(note, () => {
         note.content.text = this.note.content.text;
