@@ -12,7 +12,6 @@ import {
   linkify,
   openLinkDesktop,
   openLinkMobile,
-  resizeFile,
   platform,
 } from "./lib/utils";
 
@@ -69,9 +68,6 @@ export default function LocalEditor(props) {
       onChange={onChange}
       theme={theme}
       className="editor"
-      uploadImage={async (file) => {
-        return await resizeFile(file);
-      }}
       onClickLink={(href, event) => {
         // mobile RMe popup
         if (!(platform === "Desktop" || platform === "Browser")) {

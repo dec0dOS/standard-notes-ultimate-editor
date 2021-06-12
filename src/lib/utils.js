@@ -1,9 +1,9 @@
 import Alert from "./Alert";
-import Resizer from "react-image-file-resizer";
 
 function linkify(inputText) {
   // URLs starting with http://, https://
-  const replacePattern = /(\b(^https?):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/gim;
+  const replacePattern =
+    /(\b(^https?):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])/gim;
   const replacedText = inputText.replace(replacePattern, "<$1>");
 
   return replacedText;
@@ -90,20 +90,4 @@ function openLinkMobile(url) {
   alert.present();
 }
 
-const resizeFile = (file) =>
-  new Promise((resolve) => {
-    Resizer.imageFileResizer(
-      file,
-      500,
-      500,
-      "JPEG",
-      10,
-      0,
-      (uri) => {
-        resolve(uri);
-      },
-      "base64"
-    );
-  });
-
-export { linkify, openLinkDesktop, openLinkMobile, resizeFile, platform };
+export { linkify, openLinkDesktop, openLinkMobile, platform };
