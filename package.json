@@ -6,31 +6,30 @@
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'",
-    "upgradeDeps": "npx npm-check-updates --upgrade && yarn install"
+    "upgradeDeps": "npx npm-check-updates --upgrade && yarn install && yarn upgrade && yarn install"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "dependencies": {
-    "@standardnotes/component-relay": "^2.0.3",
+    "@standardnotes/component-relay": "^2.1.0",
     "lodash": "^4.17.21",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-image-file-resizer": "^0.4.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "react-usestateref": "^1.0.5",
-    "rich-markdown-editor": "^11.6.0",
+    "rich-markdown-editor": "11.10.0",
     "sn-components-api": "^1.2.8",
-    "sn-stylekit": "^2.2.1",
+    "sn-stylekit": "2.2.1",
     "style-loader": "^2.0.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.10",
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/preset-react": "^7.12.13",
-    "sass": "^1.32.8",
-    "sass-loader": "^11.0.1",
+    "@babel/eslint-parser": "^7.14.5",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "sass": "^1.34.1",
+    "sass-loader": "^12.1.0",
     "source-map-explorer": "^2.5.2"
   },
   "browserslist": {
