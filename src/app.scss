@@ -1,7 +1,7 @@
 @import "sn-stylekit/dist/stylekit.css";
 
 html {
-    font-size: var(--sn-stylekit-base-font-size);
+    font-size: 100%;
     background-color: transparent; // to help with seamless transition while loading themes
     height: 100%;
     width: 100%;

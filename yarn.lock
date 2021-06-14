@@ -10218,10 +10218,10 @@ sn-components-api@^1.2.8:
   resolved "https://registry.yarnpkg.com/sn-components-api/-/sn-components-api-1.2.8.tgz#5fbba6652c08d5b3e92502d782453c1520165721"
   integrity sha512-epBFsQIKLK78SnJ6e5JNjYbdOAYbKzRyydjpAqji0WdX3S/tOD5Z3UVdLVyi4orKaM4322dk6nRJiTHMI1VyIw==
 
-sn-stylekit@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/sn-stylekit/-/sn-stylekit-2.2.1.tgz#4a81a05b2b2d67a11af9d06f3964ac1ece3aa84a"
-  integrity sha512-mrvUbf2HbWOfxbNglo7RXa5JBe9UV9rurupeGoX/Kh4/lVlB2n/56ZT103xk/4tp0/mVCpxjD7Dt1stKFxsvFA==
+sn-stylekit@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/sn-stylekit/-/sn-stylekit-5.1.0.tgz#97ce7323834ff7f3645ed4463beb3ad4e42f7e7e"
+  integrity sha512-SjKJYGRnR1iCVtllqJyW9/gWV7V56MJrkXHEo5+C9Ch3syRRlG3k+AwC0vC8ms6PWxpHJUdCHLQROvFOBPQuCw==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
