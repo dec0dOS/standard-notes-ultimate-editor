@@ -37,7 +37,7 @@ export default function LocalEditor(props) {
   const updateMarkdown = (note) => {
     if (note) {
       let markdown = note.content.text.replace(
-        /(\n{2})(\n+)/g,
+        /(\n{2})(\n+)(?!:::)(?!---)/g,
         (m, p, q) => p + q.replace(/(\n)/g, "\\$1")
       );
       // onload replace links and fix ghost bug
