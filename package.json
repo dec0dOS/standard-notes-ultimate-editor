@@ -1,6 +1,6 @@
 {
   "name": "sn-ultimate-editor",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "homepage": "./",
   "scripts": {
     "start": "BROWSER=none react-scripts start",
