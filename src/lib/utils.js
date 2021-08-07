@@ -84,7 +84,7 @@ function openLinkMobile(url) {
   }
   const alert = new Alert({
     title: "Open Link",
-    text: "Do you want to open <u>" + url + "</u> ?",
+    text: "Do you want to open <u>" + url + "</u>?",
     buttons,
   });
   alert.present();
