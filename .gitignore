@@ -1,6 +1,7 @@
 node_modules
 .vscode
 tmp
+*.map
 
 TODO.md
 NEW_RELEASE_STEPS.md

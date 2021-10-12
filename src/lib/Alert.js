@@ -126,6 +126,7 @@ export default class Alert {
 
       this.buttons.forEach((buttonDesc, index) => {
         const buttonElem = this.element.querySelector(`#button-${index}`);
+        // @ts-ignore
         buttonElem.onclick = () => {
           buttonDesc.action && buttonDesc.action();
           this.dismiss();

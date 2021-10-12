@@ -62,6 +62,7 @@ export default function LocalEditor() {
   };
 
   return (
+    // @ts-ignore
     <RichMarkdownEditor
       value={gMarkdown}
       ref={setEditor}
@@ -81,6 +82,7 @@ export default function LocalEditor() {
             openLinkDesktop(href);
           } else {
             // desktop RMe popup
+            // @ts-ignore
             if (event._reactName === "onClick") {
               openLinkDesktop(href);
             }
@@ -91,6 +93,7 @@ export default function LocalEditor() {
         // mobile click on link
         if (!(platform === "Desktop" || platform === "Browser")) {
           event.preventDefault();
+          // @ts-ignore
           openLinkMobile(event.target.href);
         }
       }}
