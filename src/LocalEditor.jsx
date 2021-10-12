@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import useStateRef from "react-usestateref";
 
 import RichMarkdownEditor from "rich-markdown-editor";
-import { debounce } from "lodash";
 
 import BridgeManager from "./lib/BridgeManager";
 import theme from "./lib/theme";
@@ -15,7 +14,7 @@ import {
   platform,
 } from "./lib/utils";
 
-export default function LocalEditor(props) {
+export default function LocalEditor() {
   const [gNote, setGNote, gNoteRef] = useStateRef(null);
   const [gMarkdown, setGMarkdown] = useState("");
 
@@ -52,7 +51,7 @@ export default function LocalEditor(props) {
     }
   };
 
-  const onChange = debounce((value) => {
+  const onChange = (value) => {
     if (gNote) {
       const text = value();
       const note = gNote;
@@ -60,7 +59,7 @@ export default function LocalEditor(props) {
       setGNote(note);
       BridgeManager.get().save();
     }
-  });
+  };
 
   return (
     <RichMarkdownEditor

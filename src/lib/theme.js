@@ -41,7 +41,7 @@ export const base = {
   noticeWarningText: "var(--sn-stylekit-warning-contrast-color)",
 };
 
-export const light = {
+export const theme = {
   ...base,
   background: "transparent",
   text: "var(--sn-stylekit-paragraph-text-color)",
@@ -64,4 +64,4 @@ export const light = {
   imageErrorBackground: "var(--sn-stylekit-neutral-color)",
 };
 
-export default light;
+export default theme;

@@ -1,8 +1,9 @@
 {
   "name": "sn-ultimate-editor",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "homepage": "./",
   "scripts": {
+    "dev": "yarn start",
     "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'",
@@ -13,11 +14,10 @@
   },
   "dependencies": {
     "@standardnotes/component-relay": "^2.1.1",
-    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
-    "react-usestateref": "^1.0.5",
+    "react-usestateref": "^1.0.8",
     "rich-markdown-editor": "^11.18.6",
     "sn-components-api": "^1.2.8",
     "sn-stylekit": "^5.2.8",
@@ -29,7 +29,7 @@
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
     "sass": "^1.42.1",
-    "sass-loader": "^12.1.0",
+    "sass-loader": "^12.2.0",
     "source-map-explorer": "^2.5.2"
   },
   "browserslist": {
