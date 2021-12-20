@@ -5,7 +5,6 @@ import RichMarkdownEditor from "rich-markdown-editor";
 
 import BridgeManager from "./lib/BridgeManager";
 import theme from "./lib/theme";
-// import youtube_embed from './embeds/YouTube';
 
 import {
   linkify,
@@ -97,14 +96,6 @@ export default function LocalEditor() {
           openLinkMobile(event.target.href);
         }
       }}
-      handleDOMEvents={{
-        paste: () => updateMarkdown(),
-      }}
-      embeds={
-        [
-          // youtube_embed,
-        ]
-      }
     />
   );
 }

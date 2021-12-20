@@ -3,5 +3,13 @@ node_modules
 tmp
 *.map
 
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 TODO.md
 NEW_RELEASE_STEPS.md

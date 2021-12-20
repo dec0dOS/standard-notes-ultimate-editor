@@ -34,9 +34,6 @@ export default class BridgeManager {
   initiateBridge() {
     this.componentRelay = new ComponentRelay({
       targetWindow: window,
-      options: {
-        coallesedSavingDelay: 200,
-      },
       onReady: () => {
         // On ready and permissions authorization
         document.documentElement.classList.add(this.componentRelay.platform);
